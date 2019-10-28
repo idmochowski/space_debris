@@ -1,0 +1,7 @@
+number of experiments = 10
+time horizon = 50
+Russia removes = 1
+US removes = 1
+China removes = 1
+EU removes = 1
+remove horizon = 1
