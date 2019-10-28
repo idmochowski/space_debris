@@ -1,4 +1,4 @@
-to successfully run this project you have to have the pykep library donloaded (https://esa.github.io/pykep/)
+to successfully run this project you must have the pykep library downloaded (https://esa.github.io/pykep/)
 
 running a simultion is done by running cube4.py
 
