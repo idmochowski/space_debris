@@ -1,4 +1,4 @@
-#space-debris
+# space-debris
 to successfully run this project you must have the pykep library downloaded (https://esa.github.io/pykep/)
 
 running a simultion is done by running cube4.py
