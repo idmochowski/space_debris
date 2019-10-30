@@ -90,6 +90,7 @@ for qq in range(1,numOfExperiments+1):
     EU_list = ["EU","ASRA","BEL","CZCH","DEN","ESA","ESRO","EST","EUME","EUTE","FGER","FR","FRIT","GER","GREC","HUN","IT","LTU","LUXE","NETH","NOR","POL","POR","SPN","SWED","SWTZ","UK"]
     agentList = ['CIS', 'US', 'PRC', 'EU']
     agentListWithEU = ['CIS', 'US', 'PRC', EU_list]
+
 #  filtering only objects in LEO
     debris_LEO = []
     ep = kep.epoch(16.*365.25)
@@ -101,6 +102,7 @@ for qq in range(1,numOfExperiments+1):
         except:
             pass
     debris = debris_LEO
+    logger.info(len(debris))
 
     # osculating elements distributions
     oe_histograms = []
@@ -217,6 +219,7 @@ for qq in range(1,numOfExperiments+1):
             yearPom += 1
 
             for agentIndex in range(0,len(agentList)):
+                agentRisksProb=list(agentRisksProb)
                 agentRisksProb[agentIndex].append(agentYearRiskProb[agentIndex])
 
             commonRisksProb.append(commonRisksProbYear)
@@ -231,6 +234,7 @@ for qq in range(1,numOfExperiments+1):
                         noAssetsAgent[agentIndex] += 1
 
             for agentIndex in range(0,len(agentList)):
+                agentTotalImportantAssets=list(agentTotalImportantAssets)
                 agentTotalImportantAssets[agentIndex].append(noAssetsAgent[agentIndex])
 
         if yearToPlot != int(math.ceil((ep-16*365.25)/365.25)) and virtualRun == 0:
